@@ -1,0 +1,395 @@
+//About Us
+.sc-about {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: $about-bg-mob;
+  .img-wrp {
+    position: relative;
+    border-radius: 1rem;
+    @include box-shadow(0 3px 6px rgba($black, 0.16));
+    padding: 1rem;
+    max-width: 480px;
+    .dots {
+      position: absolute;
+      top: -1.75rem;
+      left: -2.5rem;
+      font-size: 6rem;
+      color: rgba($primary, 0.7);
+    }
+  }
+  .about-video {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    border: 1px solid $white;
+    border-radius: 4px;
+    max-width: 140px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+      background-color: rgba($black, 0.54);
+    }
+    &__btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -1.5rem 0 0 -1.5rem;
+      width: 3rem;
+      height: 3rem;
+      background-color: rgba($black, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include transition(all 0.25s ease);
+      &:hover {
+        background-color: rgba($primary, 0.95);
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: $body-bg;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+    &__ttl {
+      font-size: 3rem;
+    }
+    &__more {
+      padding: 0.675rem 1.5rem;
+    }
+    .about-video {
+      bottom: 2.5rem;
+      right: -2.5rem;
+      max-width: 220px;
+    }
+  }
+}
+
+.numbers {
+  .num {
+    color: $black;
+    margin-bottom: 0;
+    @include media-breakpoint-up(xl) {
+      font-size: 2.25rem;
+      font-weight: 600;
+    }
+  }
+  .desc {
+    font-size: 14px;
+    color: $gray-600;
+  }
+}
+
+//Projects [Exclusive, Featured & Top]
+.sc {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  &__head {
+    position: relative;
+    padding-bottom: 1rem;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 5rem;
+      height: 0.25rem;
+      background-color: $primary;
+    }
+    &.text-center {
+      &:after {
+        left: 50%;
+        margin-left: -2.5rem;
+      }
+    }
+  }
+  &__ttl {
+    font-weight: 600;
+    color: $black;
+  }
+  &__ttlprefix {
+    font-weight: normal;
+  }
+  &__head__link {
+    color: $body-color;
+    font-size: 0.75rem;
+    &:hover {
+      color: $primary;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    &__head__link {
+      font-size: 1rem;
+    }
+  }
+}
+
+.exclusive-featured {
+  @include gradient-y(#fff5e4, #fff, 0, 100%);
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  @include media-breakpoint-up(lg) {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.property-slider {
+  .slick-track {
+    margin-left: 0;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin-top: -1.5rem;
+    background: $white;
+    border-radius: 50%;
+    border: none;
+    @include box-shadow(0 2px 5px rgba($black, 0.16));
+    z-index: 3;
+    &.slick-prev {
+      left: 0.75rem;
+    }
+    &.slick-next {
+      right: 0.75rem;
+    }
+    &.slick-disabled {
+      opacity: 0.5;
+    }
+  }
+  .slick-dots {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    button {
+      background: none;
+      border: 3px solid rgba($white, 0.5);
+      width: 14px;
+      height: 14px;
+      border-radius: 1rem;
+      text-indent: -9999px;
+      padding: 0;
+      display: block;
+      @include transition(all 0.25s ease);
+    }
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 2px;
+      &.slick-active {
+        button {
+          background-color: $primary;
+          border-color: $primary;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    .slick-arrow {
+      &.slick-prev {
+        left: -1.25rem;
+      }
+      &.slick-next {
+        right: -1.25rem;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &:not(.exclusive-single) .slick-list {
+      padding-right: $mob-slider-offset;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: $mob-slider-offset;
+        height: 100%;
+        @include gradient-x(transparent, rgba($add-color2, 0.95), 0, 100%);
+      }
+    }
+  }
+}
+
+.exclusive-multiple {
+  .slick-list {
+    margin-left: -#{$slider-gap / 2};
+    margin-right: -#{$slider-gap / 2};
+  }
+  .slide-item {
+    padding: #{$slider-gap / 2} #{$slider-gap / 2} 1.5rem;
+  }
+}
+
+.featured-projects {
+  .slick-list {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .slide-item {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.exclusive-single {
+  position: relative;
+  &:before {
+    content: "Exclusive";
+    position: absolute;
+    font-weight: 500;
+    top: 2rem;
+    left: 0;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    color: $white;
+    border-radius: 0 15px 15px 0;
+    z-index: 6;
+    background-color: $secondary;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  //Custom pager [lessthan 4]
+  &__customPager {
+    margin-top: -12px;
+    .slide-item {
+      background-color: rgba($primary, 0.45);
+      color: $dark;
+      padding: 0.75rem;
+      font-weight: 500;
+      position: relative;
+      text-align: center;
+    }
+    .slick-slide {
+      padding: 10px 2px;
+      &.slick-current {
+        .slide-item {
+          background-color: $primary;
+          color: $white;
+          position: relative;
+          &:after {
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $primary;
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -10px;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+.top-projects {
+  .slick-arrow {
+    &.slick-prev {
+      left: 1.25rem;
+    }
+    &.slick-next {
+      right: 1.25rem;
+    }
+  }
+}
+
+//News and Updates
+.news-updates {
+  @include gradient-y($add-color2, $add-color1, 0, 100%);
+  padding: 1.25rem 1.25rem;
+  margin: 0 -0.75rem;
+  @include media-breakpoint-up(lg) {
+    padding: 2rem 3rem;
+    border-radius: 1rem 1rem 0 0;
+    margin: 0;
+  }
+}
+
+//News and Updates
+.news-slider {
+  .slide-item {
+    padding: 0.5rem;
+    @include media-breakpoint-up(lg) {
+      padding: 1rem;
+    }
+  }
+}
+.news-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .img-wrp {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 4px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .cnt-wrp {
+    padding-top: 1rem;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+  .news-ttl {
+    color: $body-color;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  .posted-on {
+    font-size: 13px;
+    color: $gray-600;
+  }
+  .posted-by {
+    font-size: 13px;
+  }
+  @include media-breakpoint-up(lg) {
+    flex-wrap: nowrap;
+    .img-wrp {
+      width: 120px;
+      height: 120px;
+      flex: 0 0 120px;
+    }
+    .cnt-wrp {
+      padding-left: 1rem;
+      padding-top: 0;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 10px;
+    background-color: $white;
+    border-radius: 4px;
+    @include box-shadow(0 2px 5px rgba($primary, 0.15));
+  }
+}

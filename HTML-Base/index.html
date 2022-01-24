@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>PropertyG</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <main class="pg-home">
+
+    <header class="pg-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center justify-content-between justify-content-md-start">
+            <a href="index.html" class="header-logo col me-2 me-md-4">
+              <img src="images/logo.svg" alt="" class="img-fluid" />
+            </a>
+            <div class="choose-location">
+              <button class="location-selector btn p-0 border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#locationPopup" aria-expanded="false" aria-controls="locationPopup">
+                <span class="inner btn">
+                  <i class="pgi-location ic-bf me-2"></i>
+                  <span>All india</span>
+                  <i class="pgi-angle-narrow-down ic-af ms-2"></i>
+                </span>
+              </button>
+              <!-- Choose location popup -->
+              <div id="locationPopup" class="location-popup collapse">
+                <h4 class="ttl">Explore Properties in...</h4>
+                <h6 class="sc-ttl">Popular Cities</h6>
+                <ul class="location-list list-unstyled row mb-4">
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">New Delhi</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Mumbai</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Bangalore</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Chennai</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Kalkatta</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Kochi</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Jaipur</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Ahemedabad</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Pune</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Chandigarh</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Mangalore</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Hyderabad</a></li>
+                </ul>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div class="col-12 col-md-5 col-lg-4">
+                    <h6 class="sc-ttl">Other Cities</h6>
+                  </div>
+                  <div class="col-12 col-md-5 col-lg-4">
+                    <input type="search" class="form-control search-input" placeholder="Search cities...">
+                  </div>
+                </div>
+                <ul class="location-list list-unstyled row">
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="" class="active">All India</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Adoni</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Ahemedabad</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Agarthala</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Ajmer</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Bally</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Bangalore</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Bhubaneswar</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Chandigarh</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Chennai</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Cuttak</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Dehradun</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Dehradun</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Delhi</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Denwar</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Erode</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Fareedabad</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Fatehpur</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gangtok</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gaya</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Goa</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gopalpur</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gwalior</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gundoor</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gurgaon</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Guwahati</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Hajipur</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Haldia</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Haridwar</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Hosur</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Howra</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">All India</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Adoni</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Ahemedabad</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Agarthala</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Ajmer</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Bally</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Bangalore</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Bhubaneswar</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Chandigarh</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Chennai</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Cuttak</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Dehradun</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Dehradun</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Delhi</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Denwar</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Erode</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Fareedabad</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Fatehpur</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gangtok</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gaya</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Goa</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gopalpur</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gwalior</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gundoor</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Gurgaon</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Guwahati</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Hajipur</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Haldia</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Haridwar</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Hosur</a></li>
+                  <li class="col-6 col-md-4 col-lg-3 col-xl-2"><a href="">Howra</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-auto">
+            <nav class="header-nav d-flex">
+              <ul class="
+                    list-unstyled
+                    d-none d-lg-flex
+                    align-items-center
+                    mb-0
+                    header-menu-primary
+                  ">
+                <li><a href="join-our-team.html" class="menu-item">Join Our Team</a></li>
+                <li><a href="post-property.html" class="menu-item">Post Property</a></li>
+                <li>
+                  <a href="" class="menu-item d-flex align-items-center" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">
+                    <i class="pgi-user login-i"></i>
+                    Login / Register
+                  </a>
+                </li>
+              </ul>
+              <button id="pushMenuBtn" class="btn btn-primary text-white btn-pushMenu">
+                <i class="pgi-menu d-block"></i>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="pushMenu" class="push-menu popup">
+      <div class="push-menu__overlay overlay">&nbsp;</div>
+      <nav class="push-menu__nav">
+        <div class="push-menu__head bg-primary">
+          <a href="" data-bs-toggle="modal" data-bs-target="#loginModal"
+            class="login-menu d-inline-flex align-items-center text-white">
+            <i class="pgi-user login-i"></i>
+            <span>Login / Register</span>
+          </a>
+          <button id="pushMenuClose" class="push-menu__close btn" title="Close" aria-label="Close">
+            <i class="pgi-close d-block"></i>
+          </button>
+        </div>
+        <ul class="menu-list list-unstyled m-0">
+          <li class="menu-sc">
+            <a href="post-property.html" class="menu-item text-primary">Sell / Rent Your Property</a>
+          </li>
+          <li class="menu-sc">
+            <a href="" class="menu-item">Property Search</a>
+            <a href="" class="menu-item">Hot Deals</a>
+          </li>
+          <li class="menu-sc">
+            <a href="" class="menu-item">Property Advisor Login</a>
+            <a href="join-our-team.html" class="menu-item">Join Our Team</a>
+          </li>
+          <li class="menu-sc">
+            <a href="home-loan.html" class="menu-item">Home Loan</a>
+            <a href="property-guide.html" class="menu-item">Property Guide</a>
+            <a href="seller-guide.html" class="menu-item">Seller Guide</a>
+            <a href="buyer-guide.html" class="menu-item">Buyer Guide</a>
+          </li>
+          <li class="menu-sc">
+            <a href="about.html" class="menu-item">About PropertyG</a>
+            <a href="blog-list.html" class="menu-item">Blog</a>
+            <a href="blog-list.html" class="menu-item">News</a>
+            <a href="contact.html" class="menu-item">Contact Us</a>
+          </li>
+          <li class="menu-sc border-bottom-0">
+            <a href="agents.html" class="menu-item">Search Property Advisors (Agents)</a>
+          </li>
+          <li class="menu-sc border-bottom-0 mb-3">
+            <div class="searchByCode">
+              <i class="pgi-search i-search"></i>
+              <input type="text" class="form-control" placeholder="Search by Property Code">
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="sc-hero" style="background-image: url(images/hero-banner-bg.jpg)">
+      <div class="sc-hero__content">
+        <div class="container">
+          <div class="sc-hero__head py-4 py-lg-5 text-center">
+            <h1 class="sc-hero__ttl mb-3">
+              Find your perfect <span class="text-primary">property</span> for
+              your home
+            </h1>
+            <h3 class="sc-hero__subttl">
+              We have over million properties for you
+            </h3>
+          </div>
+          <div class="pg-search mx-auto accordion">
+            <div class="pg-search__head">
+              <ul class="pg-search__tab list-unstyled mb-0 d-inline-flex nav" id="searchTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a href="" id="buy-tab" data-bs-toggle="tab" data-bs-target="#propertySearch" type="button" role="tab"
+                    aria-controls="buyrent" aria-selected="true" class="active">Buy</a>
+                </li>
+                <li class="nav-item" role="presentation"><a href="" id="rent-tab" data-bs-toggle="tab"
+                    data-bs-target="#propertySearch" type="button" role="tab" aria-controls="buyrent"
+                    aria-selected="true">Rent</a></li>
+                <li class="nav-item" role="presentation"><a href="" id="agent-tab" data-bs-toggle="tab"
+                    data-bs-target="#agentSearch" type="button" role="tab" aria-controls="agent"
+                    aria-selected="true">Agent</a></li>
+              </ul>
+            </div>
+            <div class="pg-search__body tab-content" id="searchTabContent">
+              <div class="tab-pane fade show active" id="propertySearch" role="tabpanel">
+                <form>
+                  <div class="row g-0 align-items-center">
+                    <div class="col-12 col-lg-10">
+                      <div class="row g-0 search-area">
+                        <div class="col-12 col-lg-3">
+                          <div class="btn-group search-type-selecter">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              All Residential
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li class="px-3 py-2">
+                                <h6 class="mb-0">Projects</h6>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Residential Projects</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Commercial Projects</a>
+                              </li>
+                              <li>
+                                <hr class="dropdown-divider" />
+                              </li>
+                              <li class="px-3 py-2">
+                                <h6 class="mb-0">All Residential</h6>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Residential Apartment</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Independent House/Villa</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Independent Builder/Floor</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          <div class="search-field-wrp">
+                            <i class="pgi-search search-icn"></i>
+                            <input type="text" class="form-control search-input rounded-0 border-0"
+                              placeholder="Enter property, location, landmark..." />
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                          <div class="d-grid p-2 p-lg-0">
+                            <button type="submit" class="btn btn-primary search-submit">
+                              Search
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-2 text-center ps-0">
+                      <button class="btn mt-2 mt-lg-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#moreFilters" aria-expanded="false" aria-controls="moreFilters">
+                        <i class="pgi-filter"></i>
+                        <span>More Filters</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="more-filters">
+                    <div class="collapse" id="moreFilters">
+                      <div class="row p-3 px-lg-4">
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label class="form-label fw-semibold fs-sm">Construction Status</label>
+                          <ul class="chklist btn-chklist list-unstyled mb-0 align-items-center">
+                            <li class="chk-item">
+                              <input type="radio" name="pptavailability" id="pptchk-readytomove">
+                              <label for="pptchk-readytomove">Ready to move</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptavailability" id="pptchk-underconstruction">
+                              <label for="pptchk-underconstruction">Under Construction</label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label class="form-label fw-semibold fs-sm">Sales Type</label>
+                          <ul class="chklist btn-chklist list-unstyled mb-0 align-items-center">
+                            <li class="chk-item">
+                              <input type="radio" name="pptsalestype" id="pptchk-new">
+                              <label for="pptchk-new">New</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptsalestype" id="pptchk-resale">
+                              <label for="pptchk-resale">Resale</label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label class="form-label fw-semibold fs-sm">No.of Bedrooms</label>
+                          <ul class="chklist btn-chklist list-unstyled mb-0 align-items-center">
+                            <li class="chk-item">
+                              <input type="radio" name="pptbedrooms" id="pptchk-bed1" checked="">
+                              <label for="pptchk-bed1">1</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbedrooms" id="pptchk-bed2">
+                              <label for="pptchk-bed2">2</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbedrooms" id="pptchk-bed3">
+                              <label for="pptchk-bed3">3</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbedrooms" id="pptchk-bed4">
+                              <label for="pptchk-bed4">4</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbedrooms" id="pptchk-bed5">
+                              <label for="pptchk-bed5">5</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbedrooms" id="pptchk-bed5plus">
+                              <label for="pptchk-bed5plus">morethan 5</label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label class="form-label fw-semibold fs-sm">No.of Bathrooms</label>
+                          <ul class="chklist btn-chklist list-unstyled mb-0 align-items-center">
+                            <li class="chk-item">
+                              <input type="radio" name="pptbathrooms" id="pptchk-bath1" checked="">
+                              <label for="pptchk-bath1">1</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbathrooms" id="pptchk-bath2">
+                              <label for="pptchk-bath2">2</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbathrooms" id="pptchk-bath3">
+                              <label for="pptchk-bath3">3</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbathrooms" id="pptchk-bath4">
+                              <label for="pptchk-bath4">4</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbathrooms" id="pptchk-bath5">
+                              <label for="pptchk-bath5">5</label>
+                            </li>
+                            <li class="chk-item">
+                              <input type="radio" name="pptbedrooms" id="pptchk-bath5plus">
+                              <label for="pptchk-bath5plus">morethan 5</label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label for="landAreaRangeSlider" class="form-label fs-sm fw-medium text-dark">Land
+                            Area</label>
+                          <input type="text" id="landAreaRangeSlider" class="range-slider" name="land_range" value="" />
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label for="buidupAreaRangeSlider" class="form-label fs-sm fw-medium text-dark">Buildup
+                            Area</label>
+                          <input type="text" id="buidupAreaRangeSlider" class="range-slider" name="buiduparea_range"
+                            value="" />
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                          <label for="priceRangeSlider" class="form-label fs-sm fw-medium text-dark">Select Price
+                            Range</label>
+                          <input type="text" id="priceRangeSlider" class="range-slider" name="price_range" value="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="agentSearch" role="tabpanel" aria-labelledby="agent-tab">
+                <form id="agentSearchForm">
+                  <div class="row g-0 search-area">
+
+                    <div class="col-12 col-lg-4">
+                      <div class="search-field-wrp">
+                        <input type="text" class="form-control search-input rounded-0 border-0 ps-3 bg-transparent"
+                          placeholder="Agent Name" />
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                      <select class="form-select h-100 border-0 rounded-0">
+                        <option selected>Choose City</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 1</option>
+                        <option value="3">Option 1</option>
+                        <option value="4">Option 1</option>
+                        <option value="5">Option 1</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                      <select class="form-select h-100 border-0 rounded-0">
+                        <option selected>Choose Locality</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 1</option>
+                        <option value="3">Option 1</option>
+                        <option value="4">Option 1</option>
+                        <option value="5">Option 1</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                      <div class="d-grid p-2 p-lg-0">
+                        <button type="submit" class="btn btn-primary search-submit">
+                          Search
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="sc-hero__grid text-center">
+      <div class="container">
+        <div class="row g-xxl-5">
+          <div class="col-6 col-lg-3 pb-4 pb-lg-0">
+            <a href="wants-to-buy.html" class="gridbox d-block">
+              <div class="icn-box rounded-circle">
+                <i class="pgi-buy-property"></i>
+              </div>
+              <h5 class="gridbox__ttl">Want to Buy Property</h5>
+              <p class="mb-0">Fill your desire</p>
+            </a>
+          </div>
+          <div class="col-6 col-lg-3 pb-4 pb-lg-0">
+            <a href="seller-guide.html" class="gridbox d-block">
+              <div class="icn-box rounded-circle">
+                <i class="pgi-seller-guide"></i>
+              </div>
+              <h5 class="gridbox__ttl">Seller Guide</h5>
+              <p class="mb-0">Explore Now!</p>
+            </a>
+          </div>
+          <div class="col-6 col-lg-3 pb-4 pb-lg-0">
+            <a href="buyer-guide.html" class="gridbox d-block">
+              <div class="icn-box rounded-circle">
+                <i class="pgi-buyer-guide"></i>
+              </div>
+              <h5 class="gridbox__ttl">Buyer Guide</h5>
+              <p class="mb-0">Explore Now!</p>
+            </a>
+          </div>
+          <div class="col-6 col-lg-3 pb-4 pb-lg-0">
+            <a href="home-loan.html" class="gridbox d-block">
+              <div class="icn-box rounded-circle">
+                <i class="pgi-home-loan"></i>
+              </div>
+              <h5 class="gridbox__ttl">Home Loan</h5>
+              <p class="mb-0">Calculate Now</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="sc-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="img-wrp mx-auto my-xl-4">
+              <i class="dots pgi-about-dots d-none d-xl-block"></i>
+              <img src="images/img-about.jpg" alt="" class="img-fluid">
+              <div class="about-video">
+                <img src="images/img-about-video.jpg" alt="" class="img-fluid">
+                <button class="btn p-2 rounded-circle about-video__btn">
+                  <i class="pgi-polygon-right text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+            <h4 class="sc-about__subttl text-uppercase text-black-50">About</h4>
+            <h2 class="sc-about__ttl text-black mb-lg-4">We'll help you to find <br>a place that you'll love<span
+                class="text-primary">.</span></h2>
+            <p class="lh-lg mb-lg-5"><span class="text-primary">PropertyG</span> dolor sit amet, consetetur sadipscing
+              elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+              At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et.</p>
+            <a href="" class="btn btn-primary rounded-1 d-inline-flex align-items-center sc-about__more">Read more <i
+                class="pgi-arrow-right ms-3"></i></a>
+          </div>
+        </div>
+        <div class="row g-lg-4 numbers mt-4 ps-xl-5">
+          <div class="col-6 col-lg-3">
+            <h2 class="num">20500+</h2>
+            <p class="desc">Completed Properties</p>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h2 class="num">7500+</h2>
+            <p class="desc">Property Sales</p>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h2 class="num">10500+</h2>
+            <p class="desc">Apartment Rent</p>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h2 class="num">19200+</h2>
+            <p class="desc">Happy Clients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sc-projects exclusive-featured">
+      <div class="container">
+        <div class="row align-items-end mb-3">
+          <div class="col-8">
+            <div class="sc__head">
+              <h6 class="sc__ttlprefix mb-0">The most explored</h6>
+              <h2 class="sc__ttl mb-0">Exclusive Projects</h2>
+            </div>
+          </div>
+          <div class="col-4 text-end">
+            <a href="property-listing.html"
+              class="sc__head__link text-decoration-none d-inline-flex align-items-center">
+              <span>See All Projects</span>
+              <i class="pgi-arrow-right ms-2 text-primary"></i>
+            </a>
+          </div>
+        </div>
+        <div id="exclusiveProjects" class="exclusive-multiple property-slider mb-3">
+          <div class="slide-item">
+            <div class="pcard">
+              <div class="pcard-image">
+                <a href="property-detail.html">
+                  <img src="images/project-img-01.jpg" alt="" class="img-fluid">
+                </a>
+                <div class="pcard-image-top text-white d-flex align-items-center">
+                  <span class="pcard-badge new bg-secondary">new</span>
+                  <span class="pcard-badge sale">for sale</span>
+                  <button class="btn p-0 btn-addfav ms-auto">
+                    <i class="pgi-star"></i>
+                  </button>
+                </div>
+                <div class="pcard-image-top fit-bottom pt-4 text-white d-flex align-items-end">
+                  <div class="pe-2 col">
+                    <span class="posted-on">Posted on 30th Aug, 2021</span>
+                    <span class="posted-by d-block">Skyline Groups</span>
+                  </div>
+                  <div>
+                    <div class="pcard-rating d-flex mb-1 text-secondary">
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled-half"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pcard-cnt">
+                <h5 class="pcard__ttl mb-1"><a href="property-detail.html" class="text-decoration-none">Bay view
+                    apartments</a></h5>
+                <p class="pcard__subttl">2 BHK Apartment in Hosa Road</p>
+                <p class="pcard__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy...</p>
+                <ul class="list-unstyled d-flex align-items-center pcard__dtls mb-0">
+                  <li class="pe-2">
+                    <span class="pcard__dtl">1,150-1,300</span>
+                    <span class="pcard__dtllabel">Sq.Ft</span>
+                  </li>
+                  <li class="pe-2">
+                    <span class="pcard__dtl">2 BHK</span>
+                    <span class="pcard__dtllabel">2 Baths</span>
+                  </li>
+                  <li>
+                    <span class="pcard__price text-primary">₹ 34.5 - 38.39 L</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pcard-bottom">
+                <div class="agent-info me-2">
+                  <a href="" class="img-wrp rounded-circle">
+                    <img src="images/agent-img-01.jpg" alt="Bob Haris" class="img-fluid">
+                  </a>
+                  <div class="cnt-wrp">
+                    <h6 class="agent-name mb-0">Bob Haris</h6>
+                    <p class="agent-type mb-0">Estate Agent</p>
+                  </div>
+                </div>
+                <div class="btn-wrp">
+                  <button class="btn btn-light ms-1" title="Quick View" data-bs-target="#expandViewPopup"
+                    data-bs-toggle="modal">
+                    <i class="pgi-expand"></i>
+                  </button>
+                  <button class="btn btn-light ms-1" title="Compare">
+                    <i class="pgi-compare"></i>
+                  </button>
+                  <a href="property-detail.html" class="btn btn-primary ms-1 my-1" title="Go to Details">View Detail</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="pcard">
+              <div class="pcard-image">
+                <a href="property-detail.html">
+                  <img src="images/project-img-02.jpg" alt="" class="img-fluid">
+                </a>
+                <div class="pcard-image-top text-white d-flex align-items-center">
+                  <span class="pcard-badge new bg-secondary">new</span>
+                  <span class="pcard-badge sale">for sale</span>
+                  <button class="btn p-0 btn-addfav ms-auto">
+                    <i class="pgi-star"></i>
+                  </button>
+                </div>
+                <div class="pcard-image-top fit-bottom pt-4 text-white d-flex align-items-end">
+                  <div class="pe-2 col">
+                    <span class="posted-on">Posted on 30th Aug, 2021</span>
+                    <span class="posted-by d-block">Asset Homes</span>
+                  </div>
+                  <div>
+                    <div class="pcard-rating d-flex mb-1 text-secondary">
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled-half"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pcard-cnt">
+                <h5 class="pcard__ttl mb-1"><a href="property-detail.html" class="text-decoration-none">Villa on
+                    Hartford</a></h5>
+                <p class="pcard__subttl">2 BHK Apartment in Hosa Road</p>
+                <p class="pcard__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy...</p>
+                <ul class="list-unstyled d-flex align-items-center pcard__dtls mb-0">
+                  <li class="pe-2">
+                    <span class="pcard__dtl">1,150-1,300</span>
+                    <span class="pcard__dtllabel">Sq.Ft</span>
+                  </li>
+                  <li class="pe-2">
+                    <span class="pcard__dtl">2 BHK</span>
+                    <span class="pcard__dtllabel">2 Baths</span>
+                  </li>
+                  <li>
+                    <span class="pcard__price text-primary">₹ 34.5 - 38.39 L</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pcard-bottom">
+                <div class="agent-info me-2">
+                  <a href="" class="img-wrp rounded-circle">
+                    <img src="images/agent-img-01.jpg" alt="Bob Haris" class="img-fluid">
+                  </a>
+                  <div class="cnt-wrp">
+                    <h6 class="agent-name mb-0">Bob Haris</h6>
+                    <p class="agent-type mb-0">Estate Agent</p>
+                  </div>
+                </div>
+                <div class="btn-wrp">
+                  <button class="btn btn-light ms-1" title="Quick View" data-bs-target="#expandViewPopup"
+                    data-bs-toggle="modal">
+                    <i class="pgi-expand"></i>
+                  </button>
+                  <button class="btn btn-light ms-1" title="Compare">
+                    <i class="pgi-compare"></i>
+                  </button>
+                  <a href="property-detail.html" class="btn btn-primary ms-1 my-1" title="Go to Details">View Detail</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="pcard">
+              <div class="pcard-image">
+                <a href="property-listing.html">
+                  <img src="images/project-img-03.jpg" alt="" class="img-fluid">
+                </a>
+                <div class="pcard-image-top text-white d-flex align-items-center">
+                  <span class="pcard-badge new bg-secondary">new</span>
+                  <span class="pcard-badge sale">for sale</span>
+                  <button class="btn p-0 btn-addfav ms-auto">
+                    <i class="pgi-star"></i>
+                  </button>
+                </div>
+                <div class="pcard-image-top fit-bottom pt-4 text-white d-flex align-items-end">
+                  <div class="pe-2 col">
+                    <span class="posted-on">Posted on 30th Aug, 2021</span>
+                    <span class="posted-by d-block">Skyline Groups</span>
+                  </div>
+                  <div>
+                    <div class="pcard-rating d-flex mb-1 text-secondary">
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled-half"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pcard-cnt">
+                <h5 class="pcard__ttl mb-1"><a href="" class="text-decoration-none">Ozone Greens</a></h5>
+                <p class="pcard__subttl">2 BHK Apartment in Hosa Road</p>
+                <p class="pcard__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy...</p>
+                <ul class="list-unstyled d-flex align-items-center pcard__dtls mb-0">
+                  <li class="pe-2">
+                    <span class="pcard__dtl">1,150-1,300</span>
+                    <span class="pcard__dtllabel">Sq.Ft</span>
+                  </li>
+                  <li class="pe-2">
+                    <span class="pcard__dtl">2 BHK</span>
+                    <span class="pcard__dtllabel">2 Baths</span>
+                  </li>
+                  <li>
+                    <span class="pcard__price text-primary">₹ 34.5 - 38.39 L</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pcard-bottom">
+                <div class="agent-info me-2">
+                  <a href="" class="img-wrp rounded-circle">
+                    <img src="images/agent-img-01.jpg" alt="Bob Haris" class="img-fluid">
+                  </a>
+                  <div class="cnt-wrp">
+                    <h6 class="agent-name mb-0">Bob Haris</h6>
+                    <p class="agent-type mb-0">Estate Agent</p>
+                  </div>
+                </div>
+                <div class="btn-wrp">
+                  <button class="btn btn-light ms-1" title="Quick View">
+                    <i class="pgi-expand"></i>
+                  </button>
+                  <button class="btn btn-light ms-1" title="Compare">
+                    <i class="pgi-compare"></i>
+                  </button>
+                  <button class="btn btn-primary ms-1 my-1" title="Go to Details">View Detail</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="pcard">
+              <div class="pcard-image">
+                <a href="">
+                  <img src="images/project-img-04.jpg" alt="" class="img-fluid">
+                </a>
+                <div class="pcard-image-top text-white d-flex align-items-center">
+                  <span class="pcard-badge new bg-secondary">new</span>
+                  <span class="pcard-badge sale">for sale</span>
+                  <button class="btn p-0 btn-addfav ms-auto">
+                    <i class="pgi-star"></i>
+                  </button>
+                </div>
+                <div class="pcard-image-top fit-bottom pt-4 text-white d-flex align-items-end">
+                  <div class="pe-2 col">
+                    <span class="posted-on">Posted on 30th Aug, 2021</span>
+                    <span class="posted-by d-block">Bridge Line Groups</span>
+                  </div>
+                  <div>
+                    <div class="pcard-rating d-flex mb-1 text-secondary">
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled-half"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pcard-cnt">
+                <h5 class="pcard__ttl mb-1"><a href="" class="text-decoration-none">Green Homes</a></h5>
+                <p class="pcard__subttl">2 BHK Apartment in Hosa Road</p>
+                <p class="pcard__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy...</p>
+                <ul class="list-unstyled d-flex align-items-center pcard__dtls mb-0">
+                  <li class="pe-2">
+                    <span class="pcard__dtl">1,150-1,300</span>
+                    <span class="pcard__dtllabel">Sq.Ft</span>
+                  </li>
+                  <li class="pe-2">
+                    <span class="pcard__dtl">2 BHK</span>
+                    <span class="pcard__dtllabel">2 Baths</span>
+                  </li>
+                  <li>
+                    <span class="pcard__price text-primary">₹ 34.5 - 38.39 L</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pcard-bottom">
+                <div class="agent-info me-2">
+                  <a href="" class="img-wrp rounded-circle">
+                    <img src="images/agent-img-01.jpg" alt="Bob Haris" class="img-fluid">
+                  </a>
+                  <div class="cnt-wrp">
+                    <h6 class="agent-name mb-0">Bob Haris</h6>
+                    <p class="agent-type mb-0">Estate Agent</p>
+                  </div>
+                </div>
+                <div class="btn-wrp">
+                  <button class="btn btn-light ms-1" title="Quick View">
+                    <i class="pgi-expand"></i>
+                  </button>
+                  <button class="btn btn-light ms-1" title="Compare">
+                    <i class="pgi-compare"></i>
+                  </button>
+                  <button class="btn btn-primary ms-1 my-1" title="Go to Details">View Detail</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="pcard">
+              <div class="pcard-image">
+                <a href="">
+                  <img src="images/project-img-01.jpg" alt="" class="img-fluid">
+                </a>
+                <div class="pcard-image-top text-white d-flex align-items-center">
+                  <span class="pcard-badge new bg-secondary">new</span>
+                  <span class="pcard-badge sale">for sale</span>
+                  <button class="btn p-0 btn-addfav ms-auto">
+                    <i class="pgi-star"></i>
+                  </button>
+                </div>
+                <div class="pcard-image-top fit-bottom pt-4 text-white d-flex align-items-end">
+                  <div class="pe-2 col">
+                    <span class="posted-on">Posted on 30th Aug, 2021</span>
+                    <span class="posted-by d-block">Skyline Groups</span>
+                  </div>
+                  <div>
+                    <div class="pcard-rating d-flex mb-1 text-secondary">
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled-half"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pcard-cnt">
+                <h5 class="pcard__ttl mb-1"><a href="" class="text-decoration-none">Bay view apartments</a></h5>
+                <p class="pcard__subttl">2 BHK Apartment in Hosa Road</p>
+                <p class="pcard__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy...</p>
+                <ul class="list-unstyled d-flex align-items-center pcard__dtls mb-0">
+                  <li class="pe-2">
+                    <span class="pcard__dtl">1,150-1,300</span>
+                    <span class="pcard__dtllabel">Sq.Ft</span>
+                  </li>
+                  <li class="pe-2">
+                    <span class="pcard__dtl">2 BHK</span>
+                    <span class="pcard__dtllabel">2 Baths</span>
+                  </li>
+                  <li>
+                    <span class="pcard__price text-primary">₹ 34.5 - 38.39 L</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pcard-bottom">
+                <div class="agent-info me-2">
+                  <a href="" class="img-wrp rounded-circle">
+                    <img src="images/agent-img-01.jpg" alt="Bob Haris" class="img-fluid">
+                  </a>
+                  <div class="cnt-wrp">
+                    <h6 class="agent-name mb-0">Bob Haris</h6>
+                    <p class="agent-type mb-0">Estate Agent</p>
+                  </div>
+                </div>
+                <div class="btn-wrp">
+                  <button class="btn btn-light ms-1" title="Quick View">
+                    <i class="pgi-expand"></i>
+                  </button>
+                  <button class="btn btn-light ms-1" title="Compare">
+                    <i class="pgi-compare"></i>
+                  </button>
+                  <button class="btn btn-primary ms-1 my-1" title="Go to Details">View Detail</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="pcard">
+              <div class="pcard-image">
+                <a href="">
+                  <img src="images/project-img-01.jpg" alt="" class="img-fluid">
+                </a>
+                <div class="pcard-image-top text-white d-flex align-items-center">
+                  <span class="pcard-badge new bg-secondary">new</span>
+                  <span class="pcard-badge sale">for sale</span>
+                  <button class="btn p-0 btn-addfav ms-auto">
+                    <i class="pgi-star"></i>
+                  </button>
+                </div>
+                <div class="pcard-image-top fit-bottom pt-4 text-white d-flex align-items-end">
+                  <div class="pe-2 col">
+                    <span class="posted-on">Posted on 30th Aug, 2021</span>
+                    <span class="posted-by d-block">Skyline Groups</span>
+                  </div>
+                  <div>
+                    <div class="pcard-rating d-flex mb-1 text-secondary">
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled"></i>
+                      <i class="pgi-star-filled-half"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pcard-cnt">
+                <h5 class="pcard__ttl mb-1"><a href="" class="text-decoration-none">Bay view apartments</a></h5>
+                <p class="pcard__subttl">2 BHK Apartment in Hosa Road</p>
+                <p class="pcard__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy...</p>
+                <ul class="list-unstyled d-flex align-items-center pcard__dtls mb-0">
+                  <li class="pe-2">
+                    <span class="pcard__dtl">1,150-1,300</span>
+                    <span class="pcard__dtllabel">Sq.Ft</span>
+                  </li>
+                  <li class="pe-2">
+                    <span class="pcard__dtl">2 BHK</span>
+                    <span class="pcard__dtllabel">2 Baths</span>
+                  </li>
+                  <li>
+                    <span class="pcard__price text-primary">₹ 34.5 - 38.39 L</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pcard-bottom">
+                <div class="agent-info me-2">
+                  <a href="" class="img-wrp rounded-circle">
+                    <img src="images/agent-img-01.jpg" alt="Bob Haris" class="img-fluid">
+                  </a>
+                  <div class="cnt-wrp">
+                    <h6 class="agent-name mb-0">Bob Haris</h6>
+                    <p class="agent-type mb-0">Estate Agent</p>
+                  </div>
+                </div>
+                <div class="btn-wrp">
+                  <button class="btn btn-light ms-1" title="Quick View">
+                    <i class="pgi-expand"></i>
+                  </button>
+                  <button class="btn btn-light ms-1" title="Compare">
+                    <i class="pgi-compare"></i>
+                  </button>
+                  <button class="btn btn-primary ms-1 my-1" title="Go to Details">View Detail</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-xl-5">
+          <div class="col-12 col-xl-9 col-xxl-9">
+            <div class="js-sticky">
+              <div class="mb-4">
+                <div id="exclusiveSingle" class="exclusive-single property-slider">
+                  <div class="slide-item">
+                    <div class="pcard-single">
+                      <a href="">
+                        <img src="images/exclusive-single-img-01.jpg" alt="" class="p-img img-fluid">
+                      </a>
+                      <div class="cnt-box">
+                        <div class="cnt-innerbox">
+                          <h2 class="p-ttl">Bay View Apartment</h2>
+                          <p class="p-desc">Compound With Front-Row View of the Golden Gate Bridge</p>
+                          <div class="p-price text-primary"><span class="text-2x">₹ 4500</span> onwards</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="pcard-single">
+                      <a href="">
+                        <img src="images/exclusive-single-img-02.jpg" alt="" class="p-img img-fluid">
+                      </a>
+                      <div class="cnt-box">
+                        <div class="cnt-innerbox">
+                          <h2 class="p-ttl">Unique Homes</h2>
+                          <p class="p-desc">Compound With Front-Row View of the Golden Gate Bridge</p>
+                          <div class="p-price text-primary"><span class="text-2x">₹ 4500</span> onwards</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="pcard-single">
+                      <a href="">
+                        <img src="images/exclusive-single-img-01.jpg" alt="" class="p-img img-fluid">
+                      </a>
+                      <div class="cnt-box">
+                        <div class="cnt-innerbox">
+                          <h2 class="p-ttl">Unique Homes</h2>
+                          <p class="p-desc">Compound With Front-Row View of the Golden Gate Bridge</p>
+                          <div class="p-price text-primary"><span class="text-2x">₹ 4500</span> onwards</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="pcard-single">
+                      <a href="">
+                        <img src="images/exclusive-single-img-01.jpg" alt="" class="p-img img-fluid">
+                      </a>
+                      <div class="cnt-box">
+                        <div class="cnt-innerbox">
+                          <h2 class="p-ttl">Unique Homes</h2>
+                          <p class="p-desc">Compound With Front-Row View of the Golden Gate Bridge</p>
+                          <div class="p-price text-primary"><span class="text-2x">₹ 4500</span> onwards</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="pcard-single">
+                      <a href="">
+                        <img src="images/exclusive-single-img-01.jpg" alt="" class="p-img img-fluid">
+                      </a>
+                      <div class="cnt-box">
+                        <div class="cnt-innerbox">
+                          <h2 class="p-ttl">Unique Homes</h2>
+                          <p class="p-desc">Compound With Front-Row View of the Golden Gate Bridge</p>
+                          <div class="p-price text-primary"><span class="text-2x">₹ 4500</span> onwards</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Custom Pagination with Project title - only visible exlcusive projects lessthan 4 -->
+                <div id="exclusiveSingleCustomNav" class="exclusive-single__customPager">
+                  <div class="slide-item">
+                    <span>Bay View Apartment</span>
+                  </div>
+                  <div class="slide-item">
+                    <span>Unique Homes</span>
+                  </div>
+                  <div class="slide-item">
+                    <span>Unique Homes</span>
+                  </div>
+                  <div class="slide-item">
+                    <span>Unique Homes</span>
+                  </div>
+                  <div class="slide-item">
+                    <span>Unique Homes</span>
+                  </div>
+                </div>
+              </div>
+              <section class="sc-featured-projects">
+                <div class="sc__head mb-3">
+                  <h2 class="sc__ttl mb-0 h3">Featured Projects</h2>
+                </div>
+                <div id="featuredProjects" class="property-slider featured-projects">
+                  <div class="slide-item">
+                    <div class="pcard-featured">
+                      <a href="">
+                        <img src="images/featured-project-img-01.jpg" alt="" class="p-image img-fluid">
+                      </a>
+                      <div class="cnt-box">
+                        <div class="cnt-innerbox">
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <h4 class="p-ttl mb-0">Platinum Greens</h4>
+                              <p class="p-desc mb-1">2,3 BHK Apartment, Mansarovar Extension</p>
+                              <div class="p-price text-primary">₹4500 - ₹10200</div>
+                            </div>
+                            <div class="col-auto ps-0">
+                              <span class="p-builder">
+                                <img src="images/builder-img-01.jpg" alt="" class="img-fluid rounded-circle">
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="pcard-featured">
+                      <a href="">
+                        <img src="images/featured-project-img-02.jpg" alt="" class="p-image img-fluid">
+                      </a>
+                      <div class="cnt-box">
+                        <div class="cnt-innerbox">
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <h4 class="p-ttl mb-0">Triveni Golden Leaf</h4>
+                              <p class="p-desc mb-1">2,3 BHK Apartment, Mansarovar Extension</p>
+                              <div class="p-price text-primary">₹5500 - ₹10200</div>
+                            </div>
+                            <div class="col-auto ps-0">
+                              <span class="p-builder">
+                                <img src="images/builder-img-02.jpg" alt="" class="img-fluid rounded-circle">
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="pcard-featured">
+                      <a href="">
+                        <img src="images/featured-project-img-03.jpg" alt="" class="p-image img-fluid">
+                      </a>
+                      <div class="cnt-box">
+                        <div class="cnt-innerbox">
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <h4 class="p-ttl mb-0">Moon Villas</h4>
+                              <p class="p-desc mb-1">2,3 BHK Apartment, Mansarovar Extension</p>
+                              <div class="p-price text-primary">₹5200 - ₹9600</div>
+                            </div>
+                            <div class="col-auto ps-0">
+                              <span class="p-builder">
+                                <img src="images/builder-img-01.jpg" alt="" class="img-fluid rounded-circle">
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="col-12 col-xl-3 col-xxl-3 pt-3 pt-xl-0 d-none d-md-block">
+            <div class="row">
+              <div class="col-12 col-md-4 col-xl-12">
+                <div class="pcard-promoAd" style="background-image: url('images/project-promobanner-01.jpg');">
+                  <div class="cnt-box">
+                    <svg viewBox="0 0 374.5 104.31" xmlns="http://www.w3.org/2000/svg" class="bg-shape text-primary">
+                      <polyline fill="currentColor"
+                        points="0 104.31 374.5 104.31 374.5 40.22 171.7 25.59 71.15 0 0 24.68" />
+                    </svg>
+                    <div class="cnt-box-inner">
+                      <h5 class="mb-0 text-add1">Landmark Paradise</h5>
+                      <p class="mb-0 location-text text-light">Borkhandi, Kota</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-xl-12">
+                <div class="pcard-promoAd" style="background-image: url('images/project-promobanner-01.jpg');">
+                  <div class="cnt-box">
+                    <svg viewBox="0 0 374.5 104.31" xmlns="http://www.w3.org/2000/svg" class="bg-shape text-white">
+                      <polyline fill="currentColor"
+                        points="0 104.31 374.5 104.31 374.5 40.22 171.7 25.59 71.15 0 0 24.68" />
+                    </svg>
+                    <div class="cnt-box-inner">
+                      <h5 class="mb-0 text-black">Asset Homes</h5>
+                      <p class="mb-0 location-text text-black-50">Cochin, India</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-xl-12">
+                <div class="pcard-promoAd" style="background-image: url('images/project-promobanner-01.jpg');">
+                  <div class="cnt-box">
+                    <svg viewBox="0 0 374.5 104.31" xmlns="http://www.w3.org/2000/svg" class="bg-shape text-primary">
+                      <polyline fill="currentColor"
+                        points="0 104.31 374.5 104.31 374.5 40.22 171.7 25.59 71.15 0 0 24.68" />
+                    </svg>
+                    <div class="cnt-box-inner">
+                      <h5 class="mb-0 text-add1">Diamond Manor</h5>
+                      <p class="mb-0 location-text text-light">Mumbai, India</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sc-projects top-projects mb-md-4">
+      <div class="container">
+        <div class="sc__head mb-4">
+          <h2 class="sc__ttl mb-0 h3">Top Projects</h2>
+        </div>
+      </div>
+      <div id="topProjects" class="top-projects property-slider">
+        <div class="slide-item px-1">
+          <div class="pcard-top">
+            <a href="" class="pcard-top__img" style="background-image: url('images/top-project-image-01.jpg');"></a>
+            <div class="pcard-top__cnt">
+              <h4 class="pcard-top__ttl mb-1">Real House Luxury Villa</h4>
+              <p class="pcard-top__subttl mb-0">Est St, 77 - Central Park South, NYC</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide-item px-1">
+          <div class="pcard-top">
+            <a href="" class="pcard-top__img" style="background-image: url('images/top-project-image-02.jpg');"></a>
+            <div class="pcard-top__cnt">
+              <h4 class="pcard-top__ttl mb-1">The Hermitage</h4>
+              <p class="pcard-top__subttl mb-0">by Sathya Developers</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide-item px-1">
+          <div class="pcard-top">
+            <a href="" class="pcard-top__img" style="background-image: url('images/top-project-image-01.jpg');"></a>
+            <div class="pcard-top__cnt">
+              <h4 class="pcard-top__ttl mb-1">Real House Luxury Villa</h4>
+              <p class="pcard-top__subttl mb-0">Est St, 77 - Central Park South, NYC</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide-item px-1">
+          <div class="pcard-top">
+            <a href="" class="pcard-top__img" style="background-image: url('images/top-project-image-02.jpg');"></a>
+            <div class="pcard-top__cnt">
+              <h4 class="pcard-top__ttl mb-1">The Hermitage</h4>
+              <p class="pcard-top__subttl mb-0">by Sathya Developers</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide-item px-1">
+          <div class="pcard-top">
+            <a href="" class="pcard-top__img" style="background-image: url('images/top-project-image-01.jpg');"></a>
+            <div class="pcard-top__cnt">
+              <h4 class="pcard-top__ttl mb-1">Real House Luxury Villa</h4>
+              <p class="pcard-top__subttl mb-0">Est St, 77 - Central Park South, NYC</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide-item px-1">
+          <div class="pcard-top">
+            <a href="" class="pcard-top__img" style="background-image: url('images/top-project-image-02.jpg');"></a>
+            <div class="pcard-top__cnt">
+              <h4 class="pcard-top__ttl mb-1">The Hermitage</h4>
+              <p class="pcard-top__subttl mb-0">by Sathya Developers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sc-property-collections py-4 py-lg-5">
+      <div class="container">
+        <div class="sc__head mb-4">
+          <h6 class="sc__ttlprefix mb-0">Apartments, Villas and more</h6>
+          <h2 class="sc__ttl mb-0">Property Collections</h2>
+        </div>
+        <div class="row g-xxl-5 pt-3">
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="pcard-collection">
+              <a href="" class="p-img text-decoration-none" style="background-image: url(images/bg-hotdeals.jpg);">
+                <span class="ttl h4 mb-1 text-primary">Hot Deals</span>
+                <span class="subttl">Best Deals on properties</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="pcard-collection">
+              <a href="" class="p-img text-decoration-none" style="background-image: url(images/bg-ready-to-move.jpg);">
+                <span class="ttl h4 mb-1 text-body">Ready to Move</span>
+                <span class="subttl">10500+ properties</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="pcard-collection">
+              <a href="" class="p-img text-decoration-none"
+                style="background-image: url(images/bg-resale-properties.jpg);">
+                <span class="ttl h4 mb-1 text-body">Resale Properties</span>
+                <span class="subttl">10500+ properties</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="pcard-collection">
+              <a href="" class="p-img text-decoration-none"
+                style="background-image: url(images/bg-featured-properties.jpg);">
+                <span class="ttl h4 mb-1 text-body">Featured Properties</span>
+                <span class="subttl">10500+ properties</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sc-blog">
+      <div class="container">
+        <div class="sc__head mb-4">
+          <h6 class="sc__ttlprefix mb-0">News & Updates</h6>
+          <h2 class="sc__ttl mb-0">Top Articles and guides</h2>
+        </div>
+        <div class="news-updates">
+          <div id="newsUpdates" class="news-slider property-slider">
+            <div class="slide-item">
+              <div class="news-card">
+                <div class="img-wrp">
+                  <a href="">
+                    <img src="images/news-img-01.jpg" alt="">
+                  </a>
+                </div>
+                <div class="cnt-wrp">
+                  <h5 class="news-ttl"><a href="">Tips to communicate the total cost of buying your home</a></h5>
+                  <p class="posted-on mb-1">Feb 13, 2021</p>
+                  <p class="posted-by mb-0"><span class="text-primary">Mario James</span>, Editor PropertyG.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-item">
+              <div class="news-card">
+                <div class="img-wrp">
+                  <a href="">
+                    <img src="images/news-img-01.jpg" alt="">
+                  </a>
+                </div>
+                <div class="cnt-wrp">
+                  <h5 class="news-ttl"><a href="">Tips to communicate the total cost of buying your home</a></h5>
+                  <p class="posted-on mb-1">Feb 13, 2021</p>
+                  <p class="posted-by mb-0"><span class="text-primary">Mario James</span>, Editor PropertyG.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-item">
+              <div class="news-card">
+                <div class="img-wrp">
+                  <a href="">
+                    <img src="images/news-img-01.jpg" alt="">
+                  </a>
+                </div>
+                <div class="cnt-wrp">
+                  <h5 class="news-ttl"><a href="">Tips to communicate the total cost of buying your home</a></h5>
+                  <p class="posted-on mb-1">Feb 13, 2021</p>
+                  <p class="posted-by mb-0"><span class="text-primary">Mario James</span>, Editor PropertyG.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-item">
+              <div class="news-card">
+                <div class="img-wrp">
+                  <a href="">
+                    <img src="images/news-img-01.jpg" alt="">
+                  </a>
+                </div>
+                <div class="cnt-wrp">
+                  <h5 class="news-ttl"><a href="">Tips to communicate the total cost of buying your home</a></h5>
+                  <p class="posted-on mb-1">Feb 13, 2021</p>
+                  <p class="posted-by mb-0"><span class="text-primary">Mario James</span>, Editor PropertyG.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sc-become-agent bg-dark text-white pt-2">
+      <div class="container">
+        <div class="row align-items-center py-4 py-lg-0">
+          <div class="col-12 col-lg-6 pb-3 py-lg-5">
+            <h3 class="fw-bold mb-3">Want To Become a Real Estate Agent?</h3>
+            <p class="mb-0 text-light">We'll help you to grow your career and growth.</p>
+          </div>
+          <div class="col-12 col-lg-6 text-lg-end">
+            <a href="join-our-team.html"
+              class="btn btn-primary rounded-1 d-inline-flex align-items-center sc-about__more">
+              <span>Join Our Team</span>
+              <i class="pgi-arrow-right ms-3"></i>
+            </a>
+            <img src="images/become-a-realestate-agent.svg" alt="" class="img-fluid d-none d-xl-inline-block">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl-3">
+            <a href="" class="d-block footer-logo mb-5">
+              <img src="images/logo.svg" alt="" class="img-fluid">
+            </a>
+            <ul class="footer-menu-list list-unstyled mb-5">
+              <li>
+                <i class="pgi-location me-1"></i>
+                <span>India, kerala</span>
+              </li>
+              <li>
+                <i class="pgi-email me-1"></i>
+                <span>info@propertyg.com</span>
+              </li>
+              <li>
+                <i class="pgi-phone me-1"></i>
+                <span>+91 823 82383 83</span>
+              </li>
+            </ul>
+            <p class="text-muted footer-copy">©PropertyG.com. All rights reserved.</p>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <h5 class="footer-menu-ttl">Popular Searches</h5>
+            <ul class="footer-menu-list menus list-unstyled mb-5">
+              <li><a href="">Property for Rent</a></li>
+              <li><a href="">Property for Sale</a></li>
+              <li><a href="">Condominium for Sale</a></li>
+              <li><a href="">Resale Properties</a></li>
+              <li><a href="">Recent Properties</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <h5 class="footer-menu-ttl">Quick Links</h5>
+            <ul class="footer-menu-list menus list-unstyled mb-5">
+              <li><a href="about.html">About us</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <h5 class="footer-menu-ttl">Subscribe</h5>
+            <form class="newsletter-subscription mb-5">
+              <div class="input-field">
+                <input type="email" class="form-control" placeholder="E-mail Address">
+              </div>
+              <div class="submit-field">
+                <input type="submit" value="Subscribe" class="btn btn-primary">
+              </div>
+            </form>
+            <h5 class="footer-menu-ttl">Follow us on:</h5>
+            <ul class="social-menus d-flex align-items-center list-unstyled mb-3">
+              <li><a href=""><i class="pgi-facebook"></i></a></li>
+              <li><a href=""><i class="pgi-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Enquiry Popup -->
+  <div id="enqPopup" class="popup popup-enq">
+    <!-- popup-enq__isopen -->
+    <div class="overlay popup-enq__overlay">&nbsp;</div>
+    <div class="popup-enq__main">
+      <button id="enqPopupBtn" class="popup-enq__trigger btn btn-secondary" title="Enquiry Popup">
+        <span class="d-none d-md-block">Enquiry</span>
+        <i class="icn pgi-enquiry ms-md-2"></i>
+      </button>
+      <button id="enqPopupClose" class="popup-enq__close btn" title="Close">
+        <i class="pgi-close-circle d-block"></i>
+      </button>
+      <section class="sc-from">
+        <div class="sc__head mb-4">
+          <h3 class="sc__ttl mb-2">Enquire Now</h3>
+          <h6 class="sc__ttlprefix fs-sm mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+        </div>
+        <form>
+          <p class="text-muted fs-xs"><span class="text-primary">*</span> marked fields are mandatory</p>
+          <ul class="list-unstyled pt-2 mb-0">
+            <li class="mb-3">
+              <input type="text" class="form-control" placeholder="Name*" value="">
+            </li>
+            <li class="mb-3">
+              <input type="email" class="form-control" placeholder="Email*" value="">
+            </li>
+            <li class="mb-3">
+              <input type="text" class="form-control" placeholder="Contact Number*" value="">
+            </li>
+            <li class="mb-3">
+              <input type="text" class="form-control" placeholder="City*" value="">
+            </li>
+            <li class="mb-3">
+              <select class="form-select" aria-label="Locality Selector">
+                <option value="" selected>Choose Locality*</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </li>
+            <li class="mb-3">
+              <textarea cols="30" rows="3" class="form-control" placeholder="Message*"></textarea>
+            </li>
+            <li class="d-grid gap-2 mb-3">
+              <input type="submit" class="btn btn-primary" value="Submit">
+            </li>
+          </ul>
+        </form>
+      </section>
+      <div class="sc-bottom">
+        <ul class="list-unstyled fs-sm mb-0">
+          <li class="mb-2"><i class="pgi-phone-android me-2"></i><span>1800 00 00000</span></li>
+          <li><i class="pgi-email-simple me-2"></i><span>contact@propertyg.com</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Popup -->
+  <div class="modal fade login-modal" id="loginModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="row g-0">
+          <div class="col-12 col-lg-6 d-none d-lg-block">
+            <div class="cnt-col h-100" style="background-image: url(images/bg-login.jpg);">
+              <section class="cnt-wrp">
+                <div class="text-center mt-lg-4 mb-3 mb-lg-5">
+                  <img src="images/logo.svg" alt="" class="login-logo img-fluid">
+                </div>
+                <div class="sc__head mb-4 pt-xl-3">
+                  <h3 class="sc__ttl mb-1">Welcome Back <span class="text-primary">!</span></h3>
+                  <p class="sc__subttl mb-0 text-light">Login to your Account for latest <br> property listings.</p>
+                </div>
+                <ul class="cnt-list list-unstyled fs-xs text-light pt-1 mb-lg-4">
+                  <li class="icn-bf">Get latest updates about Properties and Projects.</li>
+                  <li class="icn-bf">Access millions of advertiser details in one click.</li>
+                  <li class="icn-bf">Get market information, reports and price trends.</li>
+                  <li class="icn-bf">Advertise your property for free!</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 form-col">
+            <ul class="tab-head list-unstyled d-flex align-items-center">
+              <li><button class="btn active me-4">Login</button></li>
+              <li><button class="btn" data-bs-target="#registerModal" data-bs-toggle="modal">Register</button></li>
+            </ul>
+            <form>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email address">
+              </div>
+              <div class="mb-2">
+                <input type="password" class="form-control" placeholder="Password">
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="form-check remember-me">
+                  <input class="form-check-input" type="checkbox" name="rememberme" id="rememberMe">
+                  <label class="form-check-label" for="rememberMe">Remember me</label>
+                </div>
+                <a href="" class="forgot">Forgot Password?</a>
+              </div>
+              <div class="mb-3">
+                <input type="submit" value="Login" class="btn btn-primary btn-submit">
+              </div>
+              <div class="other-login-options">
+                <span class="or">or Login with</span>
+                <div class="login-with">
+                  <a href=""><i class="pgi-facebook"></i></a>
+                  <a href=""><i class="pgi-google"></i></a>
+                  <a href=""><i class="pgi-twitter"></i></a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register Popup -->
+  <div class="modal fade login-modal" id="registerModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="row g-0">
+          <div class="col-12 col-lg-6 d-none d-lg-block">
+            <div class="cnt-col h-100" style="background-image: url(images/bg-login.jpg);">
+              <section class="cnt-wrp">
+                <div class="text-center mt-lg-4 mb-3 mb-lg-5">
+                  <img src="images/logo.svg" alt="" class="login-logo img-fluid">
+                </div>
+                <div class="sc__head mb-4 pt-xl-3">
+                  <h3 class="sc__ttl mb-1">Welcome to Property<span class="text-primary">G</span></h3>
+                  <p class="sc__subttl mb-0 text-light">Create an account to find the best<br class="d-none d-lg-block">
+                    Property for you.</p>
+                </div>
+                <ul class="cnt-list list-unstyled fs-xs text-light pt-1 mb-lg-4">
+                  <li class="icn-bf">Get latest updates about Properties and Projects.</li>
+                  <li class="icn-bf">Access millions of advertiser details in one click.</li>
+                  <li class="icn-bf">Get market information, reports and price trends.</li>
+                  <li class="icn-bf">Advertise your property for free!</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 form-col">
+            <ul class="tab-head list-unstyled d-flex align-items-center">
+              <li><button class="btn me-4" data-bs-target="#loginModal" data-bs-toggle="modal">Login</button></li>
+              <li><button class="btn active">Register</button></li>
+            </ul>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Username">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email address">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Mobile Number Format (xxx-xxx-xxxx)">
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Password">
+              </div>
+              <div class="mb-2">
+                <input type="password" class="form-control" placeholder="Confirm Password">
+              </div>
+              <div class="mb-3">
+                <div class="form-check remember-me">
+                  <input class="form-check-input" type="checkbox" name="read" id="readaccept">
+                  <label class="form-check-label" for="readaccept">I've read and accept <a href="">terms &
+                      conditions</a></label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="submit" value="Sign Up" class="btn btn-primary btn-submit">
+              </div>
+              <div class="other-login-options">
+                <span class="or">or Sign up with</span>
+                <div class="login-with">
+                  <a href=""><i class="pgi-facebook"></i></a>
+                  <a href=""><i class="pgi-google"></i></a>
+                  <a href=""><i class="pgi-twitter"></i></a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Popup -->
+  <div class="modal fade quickView-modal" id="expandViewPopup" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header bg-dark">
+          <div class="col">
+            <div class="row align-items-end">
+              <div class="col-12">
+                <h3 class="mb-2 text-white">
+                  Bay View Appartmet
+                  <sup class="pdetail__ttlbadge badge bg-primary">For Sale</sup>
+                </h3>
+                <h6 class="text-light">2 BHK Residential Apartment</h6>
+                <p class="pdetail__location mb-2"><small><i class="pgi-location-on me-2"></i> Hosa Road, Chennai South,
+                    Chennai</small></p>
+                <div class="d-flex flex-wrap align-items-center justify-content-between">
+                  <p class="fs-xs text-light mb-0">Property Code: <strong>E57758552</strong></p>
+                  <div class="pcard-rating d-inline-flex text-secondary">
+                    <i class="pgi-star-filled"></i>
+                    <i class="pgi-star-filled"></i>
+                    <i class="pgi-star-filled"></i>
+                    <i class="pgi-star-filled"></i>
+                    <i class="pgi-star-filled-half"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-10 pt-2">
+                <span class="pdetail__price text-primary ps-3 ps-xxl-4 h4"><span class="rupee">₹</span> 48.39 L</span>
+                <div class="pdetail__area ps-3 ps-xxl-4 d-flex align-items-center">
+                  <p class="mb-0 h5 text-add1 me-2">1,450</p>
+                  <div class="d-flex align-items-center">
+                    <div class="unit-dropdown unit-dropdown-light">
+                      <button class="btn p-0 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Sq.ft.
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button">Sq.ft.</button></li>
+                        <li><button class="dropdown-item" type="button">Sq.yards.</button></li>
+                        <li><button class="dropdown-item" type="button">Sq.m.</button></li>
+                        <li><button class="dropdown-item" type="button">cents</button></li>
+                        <li><button class="dropdown-item" type="button">acres</button></li>
+                      </ul>
+                    </div>
+                    <small class="text-muted ms-1">(Negotiable)</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 text-end">
+                <button class="btn pdetail__shortlist" title="" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-original-title="Shortlist">
+                  <i class="pgi-heart-empty"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pdetail">
+          <div class="row">
+            <div class="col-12">
+              <div class="photogallery d-block">
+                <div id="pGalleryMain" class="photogallery-slider">
+                  <div class="slide-item">
+                    <img src="images/pimg-detail-01.jpg" alt="" class="slide-img">
+                  </div>
+                  <div class="slide-item">
+                    <img src="images/pimg-detail-02.jpg" alt="" class="slide-img">
+                  </div>
+                  <div class="slide-item">
+                    <img src="images/pimg-detail-03.jpg" alt="" class="slide-img">
+                  </div>
+                  <div class="slide-item">
+                    <img src="images/pimg-detail-04.jpg" alt="" class="slide-img">
+                  </div>
+                  <div class="slide-item">
+                    <img src="images/pimg-detail-05.jpg" alt="" class="slide-img">
+                  </div>
+                  <div class="slide-item">
+                    <img src="images/pimg-detail-06.jpg" alt="" class="slide-img">
+                  </div>
+                  <div class="slide-item">
+                    <img src="images/pimg-detail-07.jpg" alt="" class="slide-img">
+                  </div>
+                  <div class="slide-item">
+                    <img src="images/pimg-detail-08.jpg" alt="" class="slide-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 pt-3">
+              <ul class="pdetail-highlights list-unstyled mb-3 d-flex flex-wrap">
+                <li class="col-6 col-md-6">
+                  <span class="icn-wrp">
+                    <img src="icons/bedroom.svg" alt="">
+                  </span>
+                  <div class="cnt-wrp">
+                    <span class="ttl">4 Bedroom</span>
+                    <span class="ttl__caption">No. of Bedrooms</span>
+                  </div>
+                </li>
+                <li class="col-6 col-md-6">
+                  <span class="icn-wrp">
+                    <img src="icons/calendar.svg" alt="">
+                  </span>
+                  <div class="cnt-wrp">
+                    <span class="ttl">Aug 23, 2021</span>
+                    <span class="ttl__caption">Posted On</span>
+                  </div>
+                </li>
+                <li class="col-6 col-md-6">
+                  <span class="icn-wrp">
+                    <img src="icons/bathroom.svg" alt="">
+                  </span>
+                  <div class="cnt-wrp">
+                    <span class="ttl">5 Bathrooms</span>
+                    <span class="ttl__caption">No. of Bathroom</span>
+                  </div>
+                </li>
+                <li class="col-6 col-md-6">
+                  <span class="icn-wrp">
+                    <img src="icons/key.svg" alt="">
+                  </span>
+                  <div class="cnt-wrp">
+                    <span class="ttl">Sep 30, 2021</span>
+                    <span class="ttl__caption">Posession</span>
+                  </div>
+                </li>
+                <li class="col-6 col-md-6">
+                  <span class="icn-wrp">
+                    <img src="icons/balcony.svg" alt="">
+                  </span>
+                  <div class="cnt-wrp">
+                    <span class="ttl">2</span>
+                    <span class="ttl__caption">Balcony</span>
+                  </div>
+                </li>
+                <li class="col-6 col-md-6">
+                  <span class="icn-wrp">
+                    <img src="icons/building.svg" alt="">
+                  </span>
+                  <div class="cnt-wrp">
+                    <span class="ttl">Independent House</span>
+                    <span class="ttl__caption">Property Type</span>
+                  </div>
+                </li>
+                <li class="col-6 col-md-6">
+                  <span class="icn-wrp">
+                    <img src="icons/parking.svg" alt="">
+                  </span>
+                  <div class="cnt-wrp">
+                    <span class="ttl">Bike and Car</span>
+                    <span class="ttl__caption">Parking</span>
+                  </div>
+                </li>
+                <li class="col-6 col-md-6">
+                  <span class="icn-wrp">
+                    <img src="icons/power-backup.svg" alt="">
+                  </span>
+                  <div class="cnt-wrp">
+                    <span class="ttl">None</span>
+                    <span class="ttl__caption">Power Backup</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="cta-btns row">
+                <div class="col-12 col-md-6">
+                  <button class="btn btn-outline-dark w-100" type="button">
+                    <i class="pgi-contact-phone"></i>
+                    <span>Contact Now</span>
+                  </button>
+                </div>
+                <div class="col-12 col-md-6">
+                  <button class="btn btn-primary w-100" type="button">
+                    <span>Go to Detail</span>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/sticksy.min.js"></script>
+  <script src="js/ion.rangeSlider.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/quickView.js"></script>
+</body>
+
+</html>

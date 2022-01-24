@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'indian_rupeeregular';
+    src: url('../fonts/indianrupeefont-3w4z-webfont.woff2') format('woff2'),
+         url('../fonts/indianrupeefont-3w4z-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.rupee {
+    font-family: 'indian_rupeeregular', sans-serif;
+}

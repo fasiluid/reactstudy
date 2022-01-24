@@ -1,0 +1,137 @@
+.login-modal {
+  @include media-breakpoint-up(lg) {
+    .modal-dialog {
+      max-width: 888px;
+    }
+  }
+  .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .cnt-col {
+    padding: 2.5rem;
+    background-color: $dark;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 420px;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+    }
+    &::after {
+      top: 0;
+      height: 100%;
+      @include gradient-y($secondary, $dark, 0, 100%);
+      opacity: 0.9;
+    }
+    &::before {
+      bottom: 0;
+      height: 141px;
+      background: url(../images/bg-buildings.svg) no-repeat center center /
+        cover;
+      filter: grayscale(100%);
+    }
+  }
+  .cnt-wrp {
+    position: relative;
+    z-index: 2;
+  }
+  .login-logo {
+    width: 12.5rem;
+  }
+  .cnt-list {
+    > li {
+      margin-bottom: 0.625rem;
+      position: relative;
+      padding-left: 1.25rem;
+      &::before {
+        content: "\e903";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        font-size: 0.625rem;
+        color: $secondary;
+      }
+    }
+  }
+  .form-col {
+    padding: 2.5rem;
+    background-color: $add-color2;
+  }
+  .tab-head {
+    margin-bottom: 1.5rem;
+    .btn {
+      font-size: 1.375rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 0;
+      box-shadow: none;
+      color: $gray-500;
+      &.active {
+        color: $primary;
+        font-weight: 600;
+      }
+    }
+  }
+  .form-control,
+  .btn {
+    padding: 0.625rem 1.25rem;
+  }
+  .btn-submit {
+    font-weight: 500;
+    width: 100%;
+  }
+  .form-check-label,
+  .forgot {
+    font-size: 13px;
+    color: $gray-600;
+  }
+  .other-login-options {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-top: 3rem;
+    position: relative;
+    border-top: 1px solid $add-color1;
+    text-align: center;
+    .or {
+      display: inline-block;
+      background-color: $add-color2;
+      padding: 0.25rem 0.75rem;
+      top: -2rem;
+      position: relative;
+      color: $gray-700;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+  }
+  .login-with a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid $dark;
+    color: $dark;
+    border-radius: 0.25rem;
+    vertical-align: middle;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 2px;
+    @include transition(all 0.25s ease);
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary;
+      border-color: $primary;
+    }
+  }
+}

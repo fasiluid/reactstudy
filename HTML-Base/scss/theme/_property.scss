@@ -1,0 +1,507 @@
+//Generic Card
+.pcard {
+  border-radius: $pcard-radius;
+  background-color: $pcard-bg;
+  @include box-shadow($pcard-shadow);
+  @include transition(all 0.3s ease);
+  position: relative;
+  overflow: hidden;
+  &-image {
+    border-top-left-radius: $pcard-radius;
+    border-top-right-radius: $pcard-radius;
+    overflow: hidden;
+    position: relative;
+    height: $pcard-img-height;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include transition(all 0.5s ease);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgba($black, 0.2);
+      pointer-events: none;
+      z-index: 2;
+    }
+  }
+  &-image-top {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0.75rem $pcard-px;
+    pointer-events: none;
+    z-index: 3;
+    &.fit-bottom {
+      bottom: 0;
+      top: inherit;
+      @include gradient-y(transparent, rgba($black, 0.8), 0, 80%);
+    }
+  }
+  &-cnt {
+    padding: 1.25rem $pcard-px;
+  }
+  &-bottom {
+    border-top: 1px solid $gray-200;
+    padding: 0.75rem $pcard-px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $pcard-bg;
+    @include transition(all 0.5s ease-in-out);
+    .btn-wrp {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      .btn {
+        font-size: 13px;
+        padding: 0.25rem 0.375rem;
+        height: 32px;
+        &-light {
+          width: 32px;
+          &:hover {
+            background-color: $black;
+            color: $white;
+          }
+        }
+      }
+    }
+    .btn-contact {
+      font-size: 0.75rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      left: 0;
+      bottom: -100px;
+      width: 100%;
+      opacity: 0;
+    }
+  }
+  &-badge {
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 2px;
+    background-color: $primary;
+    color: $white;
+    font-size: 0.75rem;
+    margin-right: 8px;
+    line-height: 1;
+    &.badge-counter {
+      background-color: rgba($dark, 0.75);
+    }
+  }
+  .btn-addfav {
+    color: rgba($white, 0.75);
+    pointer-events: all;
+    &:focus, &:active {
+      outline: none;
+      box-shadow: none;
+    }
+    &:hover {
+      color: $white;
+    }
+    &.active {
+      color: $primary;
+      i {
+        filter: drop-shadow(0 0 3px $white);
+      }
+    }
+  }
+  .posted-on {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    display: block;
+  }
+  .posted-by {
+    font-weight: 600;
+  }
+  &-rating {
+    font-size: 0.75rem;
+    i {
+      margin-right: 1px;
+    }
+  }
+  &__ttl {
+    color: #171b2a;
+    font-weight: 600;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  &__subttl {
+    color: #171b2a;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  &__desc {
+    color: $gray-700;
+    font-size: 13px;
+  }
+  &__dtls {
+    flex-wrap: wrap;
+    li {
+      flex: 0 0 auto;
+      &:not(:last-child) {
+        border-right: 1px solid $gray-200;
+        padding-right: 0.875rem;
+        margin-right: 0.875rem;
+      }
+      &:last-child {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+  &__dtl {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  &__dtllabel {
+    font-size: 13px;
+    display: block;
+    color: $gray-600;
+  }
+  &__price {
+    font-weight: 600;
+    @include media-breakpoint-up(xl) {
+      font-size: 1.125rem;
+    }
+  }
+  .agent-info {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    .img-wrp {
+      flex: 0 0 32px;
+      width: 32px;
+      height: 32px;
+      display: block;
+      overflow: hidden;
+    }
+    .cnt-wrp {
+      padding-left: 10px;
+    }
+    .agent-name {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .agent-type {
+      font-size: 12px;
+      color: $gray-600;
+    }
+  }
+
+  //Hover
+  &:hover,
+  &.active-item {
+    @include box-shadow($pcard-shadow-hover);
+    .pcard-image {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    .pcard-bottom {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  &.active-item {
+    outline: 1px solid rgba($primary, 0.5);
+    @include box-shadow($pcard-shadow-active);
+  }
+
+  // List view
+  @include media-breakpoint-up(lg) {
+    &__listview {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      border-radius: 0.25rem;
+      .pcard-image {
+        flex: 0 0 35%;
+        max-width: 300px;
+        border-radius: 0;
+        height: auto;
+        min-height: 200px;
+        &-top {
+          flex-wrap: wrap;
+        }
+      }
+      .pcard-right {
+        position: relative;
+        flex: 1 1 auto;
+      }
+      .pcard__ttl {
+        font-size: 1.375rem;
+      }
+      .pcard-bottom {
+        bottom: 0;
+        position: relative;
+        padding: 0.375rem 1.25rem;
+      }
+    }
+  }
+}
+
+//Exclusive Project card
+.pcard-single {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: $gray-200;
+  @include box-shadow(0 4px 8px rgba($black, 0.12));
+  .p-img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    @include transition(transform 0.3s ease);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.5);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .cnt-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include gradient-y-three-colors(
+      transparent,
+      rgba($black, 0.5),
+      50%,
+      transparent
+    );
+    z-index: 3;
+    padding: 1.5rem;
+    color: $white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+    justify-content: center;
+  }
+  .cnt-innerbox {
+    flex: 0 1 100%;
+    width: 100%;
+    max-width: 30rem;
+  }
+  .p-ttl {
+    font-size: 2rem;
+  }
+  .p-desc {
+    margin-bottom: 0.5rem;
+  }
+  @supports (-webkit-text-stroke: 1px black) {
+    .p-ttl {
+      -webkit-text-stroke: 1px white;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .p-price {
+    font-weight: 600;
+  }
+  &:hover {
+    .p-img {
+      transform: scale(1.1);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    border-radius: 0;
+  }
+  @include media-breakpoint-up(lg) {
+    .p-ttl {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+//Featured Project card
+.pcard-featured {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: $gray-200;
+  @include box-shadow(0 4px 8px rgba($black, 0.2));
+  .p-image {
+    min-height: 300px;
+    object-fit: cover;
+    @include transition(transform 0.3s ease);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.5);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .cnt-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include gradient-y(transparent, rgba($black, 0.95), 0, 100%);
+    z-index: 3;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    color: $white;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+  .cnt-innerbox {
+    flex: 0 1 100%;
+    width: 100%;
+  }
+  .p-builder {
+    width: 3.5rem;
+    height: 3.5rem;
+    overflow: hidden;
+    display: block;
+  }
+  .p-desc {
+    font-size: 0.875rem;
+  }
+  .p-price {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  &:hover {
+    .p-image {
+      transform: scale(1.1);
+    }
+  }
+}
+
+//Promo Ad card
+.pcard-promoAd {
+  @include box-shadow(0 4px 12px rgba($black, 0.1));
+  background-color: $white;
+  border-radius: 4px;
+  height: 272px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 1.25rem;
+  max-width: 300px;
+  @extend .mx-auto;
+  .cnt-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .bg-shape {
+      height: 100px;
+      opacity: 0.95;
+    }
+  }
+  .cnt-box-inner {
+    max-height: 100px;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .location-text {
+    font-size: 0.875rem;
+  }
+}
+
+//Top Projects
+.pcard-top {
+  padding-bottom: 100%;
+  background-color: $gray-300;
+  color: $white;
+  position: relative;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include gradient-y(transparent, rgba($black, 0.9), 0, 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+  }
+  &__cnt {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    max-height: 100%;
+    padding: 1.5rem;
+    z-index: 3;
+  }
+  &__subttl {
+    font-size: 0.875rem;
+    color: $gray-400;
+  }
+}
+
+//Collection Card
+.pcard-collection {
+  background-color: $gray-200;
+  border-radius: 4px;
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+  @include box-shadow(0 3px 6px rgba($black, 0.15));
+  @include transition(all 0.25s ease);
+  margin-bottom: 1.5rem;
+  .p-img {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.75rem;
+  }
+  .ttl {
+    font-weight: 700;
+    display: block;
+  }
+  .subttl {
+    font-size: 15px;
+    color: $body-color;
+  }
+  &:hover {
+    @include box-shadow(0 5px 12px rgba($primary, 0.5));
+    transform: rotate(-3deg);
+  }
+}

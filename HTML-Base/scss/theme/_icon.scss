@@ -1,0 +1,271 @@
+@font-face {
+  font-family: 'pgicons';
+  src:  url('../fonts/pgicons.eot?6smi1s');
+  src:  url('../fonts/pgicons.eot?6smi1s#iefix') format('embedded-opentype'),
+    url('../fonts/pgicons.ttf?6smi1s') format('truetype'),
+    url('../fonts/pgicons.woff?6smi1s') format('woff'),
+    url('../fonts/pgicons.svg?6smi1s#pgicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="pgi-"], [class*=" pgi-"], 
+.icn-bf::before, 
+.check-list > li::before, 
+.chk-chk label::after,
+.property-type-list .list-group-item::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pgicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pgi-menu:before {
+  content: "\e900";
+}
+.pgi-user:before {
+  content: "\e901";
+}
+.pgi-location:before {
+  content: "\e902";
+}
+.pgi-location-on:before {
+  content: "\e904";
+}
+.pgi-angle-up:before {
+  content: "\e905";
+}
+.pgi-angle-down:before {
+  content: "\e906";
+}
+.pgi-angle-left:before {
+  content: "\e907";
+}
+.pgi-angle-right:before {
+  content: "\e903";
+}
+.pgi-search:before {
+  content: "\e908";
+}
+.pgi-filter:before {
+  content: "\e909";
+}
+.pgi-enquire:before {
+  content: "\e90a";
+}
+.pgi-polygon-right:before {
+  content: "\e90b";
+}
+.pgi-arrow-right:before {
+  content: "\e90c";
+}
+.pgi-star:before {
+  content: "\e90d";
+}
+.pgi-star-filled:before {
+  content: "\e90e";
+}
+.pgi-star-filled-half:before {
+  content: "\e90f";
+}
+.pgi-email:before {
+  content: "\e910";
+}
+.pgi-phone:before {
+  content: "\e911";
+}
+.pgi-facebook:before {
+  content: "\e912";
+}
+.pgi-twitter:before {
+  content: "\e913";
+}
+.pgi-google:before {
+  content: "\ea88";
+}
+.pgi-youtube:before {
+  content: "\e93a";
+}
+.pgi-buy-property:before {
+  content: "\e914";
+}
+.pgi-seller-guide:before {
+  content: "\e915";
+}
+.pgi-buyer-guide:before {
+  content: "\e916";
+}
+.pgi-home-loan:before {
+  content: "\e917";
+}
+.pgi-about-dots:before {
+  content: "\e918";
+}
+.pgi-area:before {
+  content: "\e919";
+}
+.pgi-bedroom:before {
+  content: "\e91a";
+}
+.pgi-bath:before {
+  content: "\e91b";
+}
+.pgi-garage:before {
+  content: "\e91c";
+}
+.pgi-expand:before {
+  content: "\e920";
+}
+.pgi-compare:before {
+  content: "\e921";
+}
+.pgi-enquiry:before {
+  content: "\e922";
+}
+.pgi-close:before {
+  content: "\e923";
+}
+.pgi-check:before {
+  content: "\e924";
+}
+.pgi-close-circle:before {
+  content: "\e925";
+}
+.pgi-check-circle:before {
+  content: "\e926";
+}
+.pgi-phone-android:before {
+  content: "\e927";
+}
+.pgi-email-simple:before {
+  content: "\e928";
+}
+.pgi-grid-view:before {
+  content: "\e929";
+}
+.pgi-list-view:before {
+  content: "\e92a";
+}
+.pgi-sort:before {
+  content: "\e92b";
+}
+.pgi-heart-empty:before {
+  content: "\e92c";
+}
+.pgi-heart:before {
+  content: "\e92d";
+}
+.pgi-contact-phone:before {
+  content: "\e92e";
+}
+.pgi-schedule:before {
+  content: "\e92f";
+}
+.pgi-bus-station:before {
+  content: "\e930";
+}
+.pgi-airplane:before {
+  content: "\e931";
+}
+.pgi-metro-train:before {
+  content: "\e932";
+}
+.pgi-train:before {
+  content: "\e933";
+}
+.pgi-school:before {
+  content: "\e934";
+}
+.pgi-hospital:before {
+  content: "\e935";
+}
+.pgi-atm:before {
+  content: "\e936";
+}
+.pgi-movie-theater:before {
+  content: "\e937";
+}
+.pgi-shopping-cart:before {
+  content: "\e938";
+}
+.pgi-stadium:before {
+  content: "\e939";
+}
+.pgi-image:before {
+  content: "\e93b";
+}
+.pgi-zoom-in:before {
+  content: "\e93c";
+}
+.pgi-download:before {
+  content: "\e93d";
+}
+.pgi-star-of-life:before {
+  content: "\e93e";
+}
+.pgi-home:before {
+  content: "\e93f";
+}
+.pgi-amenities:before {
+  content: "\e940";
+}
+.pgi-rupee:before {
+  content: "\e941";
+}
+.pgi-image-video:before {
+  content: "\e942";
+}
+.pgi-pick-location:before {
+  content: "\e943";
+}
+.pgi-upload-cloud:before {
+  content: "\e944";
+}
+.pgi-lock:before {
+  content: "\e945";
+}
+.pgi-notifications:before {
+  content: "\e946";
+}
+.pgi-eye:before {
+  content: "\e947";
+}
+.pgi-menu-dots:before {
+  content: "\e948";
+}
+.pgi-exclamation-circle:before {
+  content: "\e949";
+}
+.pgi-booked:before {
+  content: "\e94a";
+}
+.pgi-site-visit:before {
+  content: "\e94b";
+}
+.pgi-reschedule:before {
+  content: "\e94c";
+}
+.pgi-schedule1:before {
+  content: "\e94d";
+}
+.pgi-angle-narrow-down:before {
+  content: "\e91d";
+}
+.pgi-angle-narrow-up:before {
+  content: "\ea50";
+}
+.pgi-angle-narrow-left:before {
+  content: "\e91e";
+}
+.pgi-angle-narrow-right:before {
+  content: "\e91f";
+}

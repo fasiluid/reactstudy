@@ -1,0 +1,12 @@
+.quickView-modal {
+  .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .pdetail-highlights {
+    > li {
+      font-size: $font-size-sm;
+    }
+  }
+}

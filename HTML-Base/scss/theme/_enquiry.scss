@@ -1,0 +1,133 @@
+.popup-enq {
+  &__overlay {
+    background-color: $enq-overlay-bg;
+    width: 0;
+    height: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    @include transition(opacity 0.5s ease);
+    .popup__isopen & {
+      z-index: $enq-zIndex;
+      opacity: 1;
+      pointer-events: initial;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__trigger {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-right: 24px;
+    transform: rotate(90deg);
+    transform-origin: right;
+    z-index: calc(#{$enq-zIndex} + 1);
+    border-radius: 0 0 8px 8px;
+    padding: 12px 24px;
+    color: $dark;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+    .icn {
+      transform: rotate(-90deg);
+    }
+    .popup__isopen & {
+      display: none;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    padding: 0;
+    font-size: 2rem;
+    color: lighten($primary, 0.25);
+    outline: none;
+    border: none;
+    line-height: 1;
+    display: none;
+    @include transition(transform 0.25s ease);
+    &:hover {
+      transform: rotate(180deg);
+      transform-origin: center;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary;
+      box-shadow: none;
+    }
+    .popup__isopen & {
+      display: block;
+    }
+  }
+  &__main {
+    position: fixed;
+    width: 90%;
+    right: -90%;
+    height: 90%;
+    z-index: calc(#{$enq-zIndex} + 2);
+    background-color: #fff;
+    top: 5%;
+    border-radius: 50px 0 0 50px;
+    border: 3px solid $secondary;
+    border-right-width: 0;
+    @include transition(right 0.5s ease);
+    display: flex;
+    flex-direction: column;
+    .popup__isopen & {
+      right: 0;
+    }
+    .sc-from {
+      padding: 2rem 1.25rem;
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      .form-control,
+      .form-select {
+        font-size: $font-size-sm;
+      }
+    }
+    .sc-bottom {
+      padding: 1.5rem 1.5rem;
+      background: $add-color2;
+      border-bottom-left-radius: 50px;
+      [class^="pgi-"],
+      [class*=" pgi-"] {
+        width: 1.125rem;
+        display: inline-block;
+        color: $gray-600;
+      }
+      @media (max-height: 700px) {
+        display: none;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      width: 360px;
+      right: -360px;
+      .sc-from {
+        padding: 3rem 2rem 2rem;
+        .form-control,
+        .form-select {
+          padding: 0.675rem 1rem;
+        }
+        .btn {
+          padding: 0.675rem 1rem;
+        }
+      }
+      .sc-bottom {
+        padding: 2rem 3rem;
+      }
+    }
+  }
+}

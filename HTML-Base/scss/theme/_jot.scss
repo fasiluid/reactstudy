@@ -1,0 +1,236 @@
+//Top Banner
+.sc-topbanner {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: $dark;
+  color: $white;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark, 0.8);
+    z-index: 1;
+  }
+  .banner-cnt {
+    position: relative;
+    z-index: 2;
+    padding: 6rem 0;
+    text-align: center;
+    min-height: 480px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .banner-desc {
+    color: $gray-300;
+  }
+  .btn-knowmore {
+    color: $white;
+    i {
+      font-size: 10px;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .banner-desc {
+      font-size: 0.875rem;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    .banner-ttl {
+      font-size: 3rem;
+    }
+  }
+}
+
+.btn-joinnow {
+  font-size: 1rem;
+  padding: 0.625rem 1.5rem;
+  min-width: 200px;
+}
+
+.card-hjwu {
+  border: 1px solid $add-color2;
+  padding: 2rem 1.5rem;
+  @include transition(all 0.25s ease);
+  min-height: 100%;
+  .ttl {
+    font-weight: 600;
+    .counter-text {
+      color: $gray-500;
+    }
+  }
+  .desc {
+    color: $gray-600;
+  }
+  &:hover {
+    border-color: $add-color1;
+  }
+}
+.key-benefits {
+  max-width: 1149px;
+  margin: auto;
+}
+
+//Join Our Team Popup [form]
+.jot-popup {
+  .modal-header {
+    display: block;
+    text-align: center;
+    background-color: $light;
+    border-bottom: none;
+    padding-bottom: 3.5rem;
+  }
+  .btn-close {
+    background: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: $primary-light;
+    opacity: 0.75;
+    font-size: 1.5rem;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .modal-dialog {
+      max-width: 800px;
+      margin-top: 2.5rem;
+    }
+    .btn-close {
+      top: -1.5rem;
+      right: -2.25rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+.jot-tabhead {
+  margin: -2.5rem -1rem 2.5rem -1rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: darken($light, 10%);
+    @include transition(all 0.25s ease);
+  }
+  .tab-progressbar {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: $primary;
+    @include transition(all 0.5s ease);
+  }
+  .nav-tabs {
+    border-bottom: none;
+  }
+  .nav-item {
+    flex: 1;
+  }
+  .nav-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: darken($light, 15%);
+    display: block;
+    margin: 0 auto 0.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: darken($light, 25%);
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-link {
+    text-align: center;
+    width: 100%;
+    border: none;
+    margin-bottom: 0;
+    padding: 0 0.5rem;
+    color: $gray-600;
+    position: relative;
+    font-size: 0.875rem;
+    &.disabled {
+      color: $gray-400;
+      .nav-icon {
+        background-color: darken($light, 5%);
+        color: darken($light, 15%);
+      }
+    }
+    &.active {
+      background-color: transparent;
+      color: $dark;
+      .nav-icon {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+    &.is_completed {
+      .nav-icon {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: -3rem;
+    &::before,
+    .tab-progressbar {
+      top: 2rem;
+    }
+    .nav-icon {
+      width: 4rem;
+      height: 4rem;
+      font-size: 1.25rem;
+    }
+    .nav-link {
+      font-size: 1rem;
+      &::before {
+        top: 2rem;
+      }
+    }
+  }
+}
+
+.jot-form {
+  max-width: 20rem;
+  margin: 0 auto;
+  .form-label {
+    font-size: 0.875rem;
+    color: $dark;
+  }
+  .submit-wrp {
+    .btn {
+      width: 100%;
+    }
+    .btn-cancel {
+      border: 1px solid $gray-300;
+      color: $gray-600;
+      &:hover {
+        color: $dark;
+        border-color: $gray-500;
+      }
+    }
+  }
+  .remember-me {
+    font-size: 13px;
+  }
+}

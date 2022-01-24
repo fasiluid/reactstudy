@@ -1,0 +1,82 @@
+$body-bg:                   #fff;
+$body-color:                #424242;
+$light:                     #F1F1F1;
+$dark:                      #171B2A;
+
+$font-family-sans-serif:     "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$primary:                   #DB2427;
+$primary-light:             #E86365;
+$secondary:                 #C6C000;
+$add-color1:                #FFD1BE !default;
+$add-color2:                #FFF5E4 !default;
+
+$enable-shadows:             true;
+
+$input-border-color:         #E3E3E3;
+$breadcrumb-divider:         quote(">");
+
+$accordion-icon-width:       1rem;
+
+//Form and Button
+$input-btn-font-size:         0.875rem;
+$input-border-radius:         4px;
+$input-btn-padding-y:         0.5rem;
+$input-btn-padding-x:         1rem;
+
+//Scroll Behavior
+$enable-smooth-scroll:        false;
+
+//Header
+$header-zindex:               1400 !default;
+$header-logo-width-sm:        160px !default;
+$header-logo-width-md:        200px !default;
+$header-logo-width-lg:        225px !default;
+
+
+//Hero Banner [home page]
+$hero-top:                    5rem !default;
+$hero-height:                 720px !default;
+$hero-height-mob:             600px !default;
+$hero-overlay:                #000 !default;
+$hero-overlay-opacity:        0.45 !default; 
+$hero-bottom-offset:          150px !default;
+
+//Property Card 
+$pcard-bg:                    #fff !default;
+$pcard-radius:                0.5rem !default;
+$pcard-shadow:                0 3px 20px rgba(0,0,0,0.08) !default;
+$pcard-shadow-hover:          0 3px 20px rgba(0,0,0,0.16) !default;
+$pcard-shadow-active:         0 3px 20px rgba($primary,0.16) !default;
+$pcard-img-height:            200px !default;
+$pcard-px:                    1.25rem !default;
+$mob-slider-offset:           50px !default;
+$slider-gap:                  1.5rem !default;  
+
+
+
+//About
+$about-bg-mob:              #f5f5f5 !default;
+
+//Enquiry popup
+$enq-zIndex:                2000 !default;
+$enq-overlay-bg:            rgba($dark, 0.75) !default;
+
+//Push menu
+$pushMenu-zIndex:           2100 !default;
+$pushMenu-overlay-bg:       rgba($dark, 0.75) !default;
+$pushMenu-width:            340px !default;
+$pushMenu-xPadding:         1.75rem !default;
+$pushMenu-bg:               #fff !default;
+$pushMenu-size:             15px !default;
+$pushMenu-border:           $input-border-color !default;
+
+//Modal
+$zindex-modal-backdrop:             2050;
+$zindex-modal:                      2055;
+$modal-backdrop-opacity:            .75;
+
+
+//DASHBOARD (MY ACCOUNT)
+$db-sidebar-width:          300px;
+$db-sidebar-gutter-x:       1.5rem;
+$db-sidebar-gutter-y:       1rem;

@@ -1,0 +1,24 @@
+.sc-want-to-buy {
+  @include media-breakpoint-up(xxl) {
+    .ttl {
+      font-size: 3rem;
+    }
+  }
+}
+.wtb-formwrap {
+  border: 1px solid $gray-300;
+  border-radius: 0.5rem;
+  max-width: 540px;
+  margin: 0 auto;
+  &-head {
+    background-color: $add-color2;
+    padding: 2rem 2rem 3rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  &-body {
+    padding: 1rem;
+  }
+  .wtb-form {
+    max-width: 100%;
+  }
+}

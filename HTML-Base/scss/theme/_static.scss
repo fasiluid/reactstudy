@@ -1,0 +1,270 @@
+.static-banner {
+  .banner-cnt {
+    min-height: 360px;
+  }
+}
+.sc-services {
+  .top-content {
+    max-width: 1000px;
+  }
+}
+.pgs {
+  &-item {
+    border-radius: 4px;
+  }
+}
+
+//Contact page
+.contact-map {
+    border: 5px solid $add-color2;
+    min-height: 100%;
+}
+.contact-form {
+    .form-control, .form-select {
+        padding: .675rem 1rem;
+    }
+}
+
+//Property Guide, Seller Guide, Buyer Guide
+.sc-guides {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        width: 50rem;
+        height: 50rem;
+        border-radius: 50%;
+        background-color: $light;
+        top: 0;
+        left: 0;
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+        transform: translate(-50%,120px);
+    }
+}
+.guide-nav {
+    display: flex;
+    justify-content: center;
+    counter-reset: guide-nav-counter;
+    flex-wrap: wrap;
+    li {
+        padding: 0.5rem 2rem;
+        text-align: center;
+        position: relative;
+        flex: 1;
+        &:not(.active) {
+            opacity: 0.6;
+        }
+        &:hover {
+            opacity: 0.9;
+        }
+        &:last-child {
+            .next-arrow {
+                display: none;
+            }
+        }
+    }
+    .num {
+        display: block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        background-color: $add-color2;
+        border: 2px solid $add-color1;
+        margin: 0 auto 1.5rem;
+        transform: rotate(45deg);
+        text-align: center;
+        border-radius: 4px;
+        &::before {
+            counter-increment: guide-nav-counter;
+            content: counter(guide-nav-counter);
+            font-size: 1.5rem;
+            font-weight: 600;
+            transform: rotate(-45deg);
+            display: block;
+        }
+    }
+    .txt {
+        text-decoration: none;
+        color: $dark;
+        font-size: $font-size-sm;
+        font-weight: 600;
+    }
+    .next-arrow {
+        position: absolute;
+        left: 100%;
+        top: 30px;
+        margin-left: -0.5rem;
+        color: $gray-400;
+    }
+}
+.guide-slider {
+    &-wrap {
+        position: relative;
+        min-height: 30rem;
+    }
+    &-controls {
+        .slide-counter {
+            font-size: 2.25rem;
+            color: $gray-500;
+        }
+        .current {
+            font-size: 5rem;
+            line-height: 5rem;
+            color: $primary-light;
+            font-weight: 600;
+        }
+        .slick-arrow {
+            border: 2px solid $gray-700;
+            background: none;
+            outline: none;
+            width: 3rem;
+            height: 3rem;
+            margin: 2px;
+            border-radius: 0.25rem;
+            &.slick-disabled {
+                opacity: 0.5;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            top: 8rem;
+            z-index: 5;
+        }
+    }
+    .cnt-wrp {
+        @include media-breakpoint-up(lg) {
+            padding-left: 15rem;
+            max-width: 1200px;
+        }
+    }
+}
+
+//Home Loan
+.hl-form-wrap {
+    border: 1px solid $light;
+    .nav-tabs {
+        border-bottom-color: $light;
+        .nav-link {
+            border-right: 1px solid $light;
+            border-left: 1px solid $light;
+            border-radius: 0;
+            font-size: $font-size-sm;
+            font-weight: 500;
+            width: 100%;
+            height: 100%;
+            color: $gray-600;
+            padding: 0.875rem;
+            &.active {
+                color: $dark;
+                background-color: $add-color2;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -10px;
+                    content: "";
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid $add-color2;
+                    filter:  drop-shadow(0 1px 1px $gray-300);
+                }
+            }
+        }
+        .nav-item {
+            flex: 1;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                flex: 0 0 100%;
+                .nav-link.active {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.hl-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+//Blogs & News
+.news-list {
+    .news {
+        &-card {
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            @include media-breakpoint-up(lg) {
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid $light;
+                .img-wrp {
+                    width: 200px;
+                    height: 200px;
+                    flex: 0 0 200px;
+                }
+                .cnt-wrp {
+                    max-height: 200px;
+                    overflow: hidden;
+                    padding-left: 1.25rem;
+                }
+            }
+        }
+        &-ttl {
+            font-size: 1.5rem;
+        }
+    }
+}
+.news-sidebar {
+    .pcard-promoAd {
+        max-width: 100%;
+        height: 320px;
+    }
+}
+.similar-news {
+    .news {
+        &-card {
+            .img-wrp {
+                width: 5rem;
+                height: 4rem;
+                flex: 0 0 5rem;
+            }
+        }
+    }
+}
+.featurednews-list {
+    .list-group-item {
+        position: relative;
+        padding-left: 1.5rem;
+        padding-right: 0;
+    }
+    a {
+        text-decoration: none;
+        color: $body-color;
+    }
+    .list-icon {
+        position: absolute;
+        top: 50%;
+        margin-top: -0.5rem;
+        left: 0;
+        font-size: 0.5rem;
+        color: $primary;
+    }
+}
+
+.blog-detail {
+    &-hd {
+        position: relative;
+    }
+    .hd-cnt {
+        background-color: rgba($dark,0.9);
+        padding: 1.25rem;
+        color: $white;
+        margin: -2.5rem 1rem 2rem;
+        position: relative;
+        z-index: 2;
+    }
+}

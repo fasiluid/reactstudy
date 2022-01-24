@@ -1,0 +1,128 @@
+.push-menu {
+  &__overlay {
+    background-color: $pushMenu-overlay-bg;
+    width: 0;
+    height: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    @include transition(opacity 0.5s ease);
+    .popup__isopen & {
+      z-index: $pushMenu-zIndex;
+      opacity: 1;
+      pointer-events: initial;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    width: 90%;
+    right: -90%;
+    height: 100%;
+    z-index: calc(#{$pushMenu-zIndex} + 2);
+    background-color: $pushMenu-bg;
+    top: 0;
+    @include transition(right 0.5s ease);
+    display: flex;
+    flex-direction: column;
+    .popup__isopen & {
+      right: 0;
+    }
+    @include media-breakpoint-up(md) {
+      width: $pushMenu-width;
+      right: -#{$pushMenu-width};
+    }
+  }
+
+  &__head {
+    padding: 0.875rem $pushMenu-xPadding;
+    position: relative;
+    flex: 0 0 60px;
+  }
+  &__close {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.625rem;
+    right: $pushMenu-xPadding;
+    padding: 0;
+    font-size: 1.25rem;
+    color: $add-color1;
+    outline: none;
+    border: none;
+    line-height: 1;
+    display: none;
+    @include transition(all 0.25s ease);
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      box-shadow: none;
+    }
+    .popup__isopen & {
+      display: block;
+    }
+  }
+  .login-menu {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    .login-i {
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid $gray-300;
+      border-radius: 50%;
+      padding: 0.25rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0.75rem;
+    }
+  }
+  .menu-list {
+    padding: 0 $pushMenu-xPadding;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .menu-sc {
+    border-bottom: 1px solid $pushMenu-border;
+    padding: 0.5rem 0;
+    margin-bottom: 1px;
+  }
+  .menu-item {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    color: $body-color;
+    font-size: $pushMenu-size;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary;
+    }
+  }
+  .searchByCode {
+    position: relative;
+    .form-control {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding: 0.75rem 1rem 0.75rem 2.5rem;
+      background-color: $light;
+      font-size: $font-size-sm;
+    }
+    .i-search {
+      position: absolute;
+      top: 50%;
+      margin-top: -0.5rem;
+      left: 1rem;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+  }
+}

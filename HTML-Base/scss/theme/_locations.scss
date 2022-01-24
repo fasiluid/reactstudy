@@ -1,0 +1,54 @@
+.location-popup {
+    &.collapse {
+        position: absolute;
+        z-index: 3;
+        top: 56px;
+        margin-top: 3px;
+        left: 2%;
+        width: 96%;
+        max-height: calc(100vh - 90px);
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 1rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        @include media-breakpoint-up(lg) {
+            left: -1rem;
+            width: 900px;
+            top: 100%;
+            padding: 2rem;
+        }
+        @include media-breakpoint-only(lg) {
+            width: 640px;
+        }
+    }
+    &.collapsing {
+        -webkit-transition: none;
+        transition: none;
+        display: none;
+    }
+    .ttl {
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .sc-ttl {
+        color: $gray-600;
+        margin-bottom: 0.75rem;
+    }
+    .location-list {
+        a {
+            font-size: $font-size-sm;
+            text-decoration: none;
+            color: $black;
+            display: inline-block;
+            padding: 4px 0;
+            margin-bottom: 4px;
+            &:hover, &:active, &:focus, &.active {
+                color: $primary;
+            }
+        }
+    }
+    .search-input {
+        padding: 0.25rem 0.75rem;
+    }
+}
